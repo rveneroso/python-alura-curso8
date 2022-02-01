@@ -2,6 +2,7 @@ from validate_docbr import CPF, CNPJ
 
 class CpfCnpj:
     def __init__(self, documento, tipo_documento):
+        self.tipo_documento = tipo_documento
         if(tipo_documento.lower()=='cpf'):
             documento = str(documento)
             if(self.cpf_e_valido(documento)):
@@ -18,10 +19,12 @@ class CpfCnpj:
             raise ValueError("Tipo de documento inválido!!")
 
     def __str__(self):
-        if(hasattr(self, 'cpf')):
+        if(self.tipo_documento.lower()=='cpf'):
             return self.format_cpf()
-        else:
+        elif(self.tipo_documento.lower()=='cnpj'):
             return self.format_cnpj()
+        else:
+            raise ValueError("Tipo de documento inválido!!")
 
     def cpf_e_valido(self, documento):
         if(len(documento)==11):

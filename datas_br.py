@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 class DatasBr:
     def __init__(self):
         self.momento_cadastro = datetime.today()
@@ -37,3 +37,8 @@ class DatasBr:
 
     def format_data(self):
         return self.momento_cadastro.strftime("%d/%m/%Y %H:%m")
+
+    def tempo_cadastro(self):
+        # O timedelta é usado abaixo apenas para forçar alguma diferença já que não temos a data
+        # e hora de cadastro persistida em nenhum lugar.
+        return (datetime.today() + timedelta(days=5, hours=12)) - self.momento_cadastro

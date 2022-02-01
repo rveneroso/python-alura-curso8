@@ -9,4 +9,4 @@ hoje = datetime.today()
 # formato_data = "%d/%m/%Y %H:%m"
 # print(hoje.strftime(formato_data))
 hoje = DatasBr()
-print(hoje)
+print(hoje.tempo_cadastro())

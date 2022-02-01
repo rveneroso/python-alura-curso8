@@ -1,7 +1,11 @@
-from Cpf import Cpf
+from cpf_cnpj import CpfCnpj
 cpf = 66826858070
-objeto_cpf = Cpf(cpf)
+objeto_cpf = CpfCnpj(cpf, 'cpf')
 print(objeto_cpf)
-print(objeto_cpf.cpf_eh_valido(objeto_cpf.cpf))
+
+cnpj = 31117285000179
+objeto_cnpj = CpfCnpj(cnpj, 'cnpj')
+print(objeto_cnpj)
+
 
 

@@ -1,10 +1,6 @@
-from telefones_br import TelefonesBr
-import re
+from datetime import datetime, timedelta
+from datas_br import DatasBr
+print(datetime.today())
 
-telefone = TelefonesBr("553198041531")
-print(telefone)
-
-# padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
-# resposta = re.findall(padrao,telefone)
-#
-# print(resposta)
+cadastro = DatasBr()
+print(cadastro.dia_semana_cadastro())

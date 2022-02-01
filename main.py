@@ -1,13 +1,10 @@
-from cpf_cnpj import Documento
 from telefones_br import TelefonesBr
-# cpf = "66826858070"
-# objeto_cpf = Documento.cria_documento(cpf)
-# print(objeto_cpf)
+import re
+
+telefone = TelefonesBr("553198041531")
+print(telefone)
+
+# padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+# resposta = re.findall(padrao,telefone)
 #
-# cnpj = "31117285000179"
-# objeto_cnpj = Documento.cria_documento(cnpj)
-# print(objeto_cnpj)
-
-numero = '2126451234'
-telefone = TelefonesBr(numero)
-
+# print(resposta)

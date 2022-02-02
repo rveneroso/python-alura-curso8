@@ -3,7 +3,9 @@ import requests
 
 cep = 30510550
 objeto_cep = BuscaEndereco(cep)
-print(objeto_cep.consulta_cep())
 
-a = objeto_cep.consulta_cep()
-print(a)
+# Não sabia que é possível fazer esse tipo de atribuição no Python.
+bairro, cidade, uf = objeto_cep.consulta_cep()
+print(bairro)
+print(cidade)
+print(uf)
